@@ -138,7 +138,7 @@ jobs:
         if [ $(find openwrt/bin/targets/*/* -name '*.gz' -size +10M | wc -l) -lt 1 ]; then exit 1; fi;
         cd openwrt/bin/targets/*/*
         rm -rf packages
-        echo "::set-env name=FIRMWARE::${PWD}/openwrt-x86-64-generic-ext4-combined.vmdk.gz"
+        echo "::set-env name=FIRMWARE::${PWD}/openwrt-x86-64-generic-uefi-combined.iso.gz"
         echo "::set-output name=status::success"
     
     - name: Upload firmware directory
